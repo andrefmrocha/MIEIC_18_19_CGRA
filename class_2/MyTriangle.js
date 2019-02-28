@@ -11,7 +11,7 @@ class MyTriangle extends CGFobject{
         ];
 
         this.indices = [
-            0, 1, 2
+            0, 2, 1
         ];
 
         this.primiteType = this.scene.gl.TRIANGLES;
