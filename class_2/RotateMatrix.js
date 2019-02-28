@@ -34,6 +34,3 @@ function rotate_Y(ang){
     ];
     return m;
 }
-
-
-

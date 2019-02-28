@@ -9,7 +9,7 @@ class MyParallelogram extends CGFobject{
             0, 0, 0,
             1, 0, 0,
             2, 0, 0,
-            3, 1, 0, 
+            3, 1, 0,
             2, 1, 0,
             1, 1, 0
         ];
@@ -20,6 +20,7 @@ class MyParallelogram extends CGFobject{
             2, 4, 5,
             3, 4, 2,
         ];
+        
 
         this.primiteType = this.scene.gl.TRIANGLES;
 

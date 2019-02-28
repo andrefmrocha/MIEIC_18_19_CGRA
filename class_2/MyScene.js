@@ -2,6 +2,9 @@
 * MyScene
 * @constructor
 */
+
+
+
 class MyScene extends CGFscene {
     constructor() {
         super();
@@ -87,13 +90,47 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        this.diamondGreen.display();
-        this.trianglePink.display();
-        this.triangleRed.display();
-        this.trianglePurple.display();
-        this.triangleBlue.display();
-        this.triangleOrange.display();
+        this.pushMatrix();
+        this.multMatrix(translation([2,1.75,0]));
+        this.multMatrix(rotate_Z(45-17));
+        //this.diamondGreen.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        this.multMatrix(rotate_Z(270));
+        //this.trianglePink.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        this.multMatrix(translation([-3.83,-0.2,0]));
+        //this.triangleRed.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        this.multMatrix(translation([-2.5,1.5,0]));
+        this.multMatrix(rotate_Z(-45));
+        this.multMatrix(translation([-0.5,0,0]));
+        //this.trianglePurple.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        this.multMatrix(translation([2,-1,0]));
+        //this.triangleBlue.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        this.multMatrix(translation([-1.5,0.5,0]));
+        this.multMatrix(rotate_Z(135));
+        this.multMatrix(translation([-0.13,0,0]));
+        //this.triangleOrange.display();
+        this.popMatrix();
+
+        this.pushMatrix();
+        //this.multMatrix(scaling([1,-1,1]));
+        this.multMatrix(rotate_Y(180));
+        //this.multMatrix(translation([-8,0,0]));
         this.parallelogramYellow.display();
+        this.popMatrix();
 
         // ---- END Primitive drawing section
     }
