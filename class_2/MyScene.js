@@ -21,11 +21,18 @@ class MyScene extends CGFscene {
 
         //Initialize scene objects
         this.axis = new CGFaxis(this);
-        this.diamond = new MyDiamond(this);
-        this.triangle = new MyTriangle(this);
-        this.parallelogram = new MyParallelogram(this);
-        this.smallTri = new MyTriangleSmall(this);
-        this.bigTri = new MyTriangleBig(this);
+        //square
+        this.diamondGreen = new MyDiamond(this);
+        //medium triangle
+        this.trianglePink = new MyTriangle(this);
+        //small triangle
+        this.triangleRed = new MyTriangleSmall(this);
+        this.trianglePurple = new MyTriangleSmall(this);
+        //big triangle
+        this.triangleBlue = new MyTriangleBig(this);
+        this.triangleOrange = new MyTriangleBig(this);
+        //parallelogram
+        this.parallelogramYellow = new MyParallelogram(this);
 
 
         //Objects connected to MyInterface
@@ -62,7 +69,7 @@ class MyScene extends CGFscene {
         this.loadIdentity();
         // Apply transformations corresponding to the camera position relative to the origin
         this.applyViewMatrix();
-        
+
         // Draw axis
         if (this.displayAxis)
             this.axis.display();
@@ -76,22 +83,17 @@ class MyScene extends CGFscene {
         this.multMatrix(sca);
 
 
+
+
         // ---- BEGIN Primitive drawing section
 
-        if(this.displayDiamond)
-            this.diamond.display();
-        
-        if(this.displayTriangle)
-            this.triangle.display();
-
-        if(this.displayPara)
-            this.parallelogram.display();
-
-        if(this.displaySmall)
-            this.smallTri.display();
-
-        if(this.displayBig)
-            this.bigTri.display();
+        this.diamondGreen.display();
+        this.trianglePink.display();
+        this.triangleRed.display();
+        this.trianglePurple.display();
+        this.triangleBlue.display();
+        this.triangleOrange.display();
+        this.parallelogramYellow.display();
 
         // ---- END Primitive drawing section
     }
