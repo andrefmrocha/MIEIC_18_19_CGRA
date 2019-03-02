@@ -30,12 +30,8 @@ class MyScene extends CGFscene {
 
         //Objects connected to MyInterface
         this.displayAxis = true;
-        this.displayPara = false;
-        this.displayDiamond = false;
-        this.displayTriangle = false;
+        this.displayTangram = true;
         this.scaleFactor = 1;
-        this.displaySmall = false;
-        this.displayBig = false;
     }
     initLights() {
         this.lights[0].setPosition(15, 2, 5, 1);
@@ -80,7 +76,8 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        this.tangram.display(this);
+        if(this.displayTangram)
+            this.tangram.display(this)
         // ---- END Primitive drawing section
     }
 }
