@@ -15,7 +15,7 @@ function rotate_X(ang){
 
     m = [
         1, 0, 0, 0,
-        0, Math.cos(radian), Math.sen(radian), 0,
+        0, Math.cos(radian), Math.sin(radian), 0,
         0, -Math.sin(radian), Math.cos(radian), 0,
         0, 0, 0, 1
     ];
