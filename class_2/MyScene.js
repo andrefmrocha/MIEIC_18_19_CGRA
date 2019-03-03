@@ -31,7 +31,7 @@ class MyScene extends CGFscene {
 
         //Objects connected to MyInterface
         this.displayAxis = true;
-        this.displayTangram = false;
+        this.displayTangram = true;
         this.displayCube = true;
         this.scaleFactor = 1;
     }
