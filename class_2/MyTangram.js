@@ -55,8 +55,8 @@ class MyTangram extends CGFobject {
 
         scene.pushMatrix();
         scene.multMatrix(rotate_X(180));
-        scene.multMatrix(translation([0, -1, 0]));
-        scene.multMatrix(translation([2, 0, 0]));
+        scene.multMatrix(translation([2, -1, 0]));
+        scene.multMatrix(translation([Math.sqrt(2) * 0.3, Math.sqrt(2) * 0.3, 0]));
         this.parallelogramYellow.display();
         scene.popMatrix();
 
