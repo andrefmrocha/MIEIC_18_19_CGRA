@@ -27,6 +27,7 @@ class MyScene extends CGFscene {
         this.pyramid = new MyPyramid(this, 3, 1);
         this.cube = new MyCube(this);
         this.tangram = new MyTangram(this);
+        this.triangle = new MyTriangle(this);
 
         this.ambientLight = 0;
         
@@ -172,7 +173,7 @@ class MyScene extends CGFscene {
             this.objects[this.selectedObject].enableNormalViz();
         else
             this.objects[this.selectedObject].disableNormalViz();
-            
+
         this.objects[this.selectedObject].display();
         this.popMatrix();
         // ---- END Primitive drawing section

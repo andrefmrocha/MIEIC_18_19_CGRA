@@ -14,25 +14,6 @@ class MyTangram extends CGFobject {
         //parallelogram
         this.parallelogramYellow = new MyParallelogram(scene);
 
-        this.vertices = [];
-        this.vertices.push(this.diamondGreen.vertices);
-        this.vertices.push(this.trianglePink.vertices);
-        this.vertices.push(this.triangleRed.vertices);
-        this.vertices.push(this.trianglePurple.vertices);
-        this.vertices.push(this.triangleBlue.vertices);
-        this.vertices.push(this.triangleOrange.vertices);
-        this.vertices.push(this.parallelogramYellow.vertices);
-
-        this.normals = [];
-        this.normals.push(this.diamondGreen.normals);
-        this.normals.push(this.trianglePink.normals);
-        this.normals.push(this.triangleRed.normals);
-        this.normals.push(this.trianglePurple.normals);
-        this.normals.push(this.triangleBlue.normals);
-        this.normals.push(this.triangleOrange.normals);
-        this.normals.push(this.parallelogramYellow.normals);
-
-
     }
 
     display(){
@@ -83,5 +64,24 @@ class MyTangram extends CGFobject {
     }
     updateBuffers (){
       
+    }
+
+    enableNormalViz(){
+        this.diamondGreen.enableNormalViz();
+        this.trianglePink.enableNormalViz();
+        this.triangleRed.enableNormalViz();
+        this.trianglePurple.enableNormalViz();
+        this.triangleBlue.enableNormalViz();
+        this.triangleOrange.enableNormalViz();
+        this.parallelogramYellow.enableNormalViz();
+    }
+    disableNormalViz(){
+        this.diamondGreen.disableNormalViz();
+        this.trianglePink.disableNormalViz();
+        this.triangleRed.disableNormalViz();
+        this.trianglePurple.disableNormalViz();
+        this.triangleBlue.disableNormalViz();
+        this.triangleOrange.disableNormalViz();
+        this.parallelogramYellow.disableNormalViz();
     }
 }
