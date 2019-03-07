@@ -6,10 +6,14 @@ class MyParallelogram extends CGFobject{
 
     initBuffers(){
         this.vertices = [
-            0, 0, 0,
-            2, 0, 0,
-            3, 1, 0,
-            1, 1, 0,
+          0, 0, 0,
+          2, 0, 0,
+          3, 1, 0,
+          1, 1, 0,
+          0, 0, 0,
+          2, 0, 0,
+          3, 1, 0,
+          1, 1, 0,
         ];
 
         this.indices = [
@@ -22,6 +26,9 @@ class MyParallelogram extends CGFobject{
         this.normals = [];
         for(var i = 0; i < 4 ; i++){
           this.normals.push(0,0,1);
+        }
+        for(var i = 0; i < 4 ; i++){
+          this.normals.push(0,0,-1);
         }
 
 

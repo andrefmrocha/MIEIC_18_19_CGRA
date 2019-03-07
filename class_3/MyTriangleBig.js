@@ -7,9 +7,12 @@ class MyTriangleBig extends CGFobject {
     initBuffers() {
 
         this.vertices = [
-            -2, 0, 0,
-            2, 0, 0,
-            0, 2, 0
+          -2, 0, 0,
+          2, 0, 0,
+          0, 2, 0,
+          -2, 0, 0,
+          2, 0, 0,
+          0, 2, 0
         ];
 
         this.indices = [
@@ -18,6 +21,9 @@ class MyTriangleBig extends CGFobject {
         this.normals = [];
         for(var i = 0; i < 3 ; i++){
           this.normals.push(0,0,1);
+        }
+        for(var i = 0; i < 3 ; i++){
+          this.normals.push(0,0,-1);
         }
 
         this.primiteType = this.scene.gl.TRIANGLES;

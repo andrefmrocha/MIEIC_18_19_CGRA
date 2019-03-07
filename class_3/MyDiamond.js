@@ -13,6 +13,10 @@ class MyDiamond extends CGFobject {
 			-1, 0, 0,	//0
 			0, -1, 0,	//1
 			0, 1, 0,	//2
+			1, 0, 0,		//3
+			-1, 0, 0,	//0
+			0, -1, 0,	//1
+			0, 1, 0,	//2
 			1, 0, 0		//3
 		];
 
@@ -25,6 +29,9 @@ class MyDiamond extends CGFobject {
 		this.normals = [];
 		for(var i = 0; i < 4 ; i++){
 			this.normals.push(0,0,1);
+		}
+		for(var i = 0; i < 4 ; i++){
+			this.normals.push(0,0,-1);
 		}
 
 		this.primitiveType = this.scene.gl.TRIANGLES;
