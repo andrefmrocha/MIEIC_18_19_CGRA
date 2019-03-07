@@ -13,6 +13,26 @@ class MyTangram extends CGFobject {
         this.triangleOrange = new MyTriangleBig(scene);
         //parallelogram
         this.parallelogramYellow = new MyParallelogram(scene);
+
+        this.vertices = [];
+        this.vertices.push(this.diamondGreen.vertices);
+        this.vertices.push(this.trianglePink.vertices);
+        this.vertices.push(this.triangleRed.vertices);
+        this.vertices.push(this.trianglePurple.vertices);
+        this.vertices.push(this.triangleBlue.vertices);
+        this.vertices.push(this.triangleOrange.vertices);
+        this.vertices.push(this.parallelogramYellow.vertices);
+
+        this.normals = [];
+        this.normals.push(this.diamondGreen.normals);
+        this.normals.push(this.trianglePink.normals);
+        this.normals.push(this.triangleRed.normals);
+        this.normals.push(this.trianglePurple.normals);
+        this.normals.push(this.triangleBlue.normals);
+        this.normals.push(this.triangleOrange.normals);
+        this.normals.push(this.parallelogramYellow.normals);
+
+
     }
 
     display(){
@@ -60,5 +80,8 @@ class MyTangram extends CGFobject {
         this.parallelogramYellow.display();
         this.scene.popMatrix();
 
+    }
+    updateBuffers (){
+      
     }
 }
