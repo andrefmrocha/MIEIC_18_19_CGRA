@@ -25,12 +25,15 @@ class MyScene extends CGFscene {
         this.plane = new MyPlane(this, 5);
         this.cone = new MyCone(this, 3, 1);
         this.pyramid = new MyPyramid(this, 3, 1);
+        this.cube = new MyCube(this);
+        this.tangram = new MyTangram(this);
+
         this.ambientLight = 0;
         
-        this.objects = [this.plane, this.pyramid, this.cone];
+        this.objects = [this.plane, this.pyramid, this.cone, this.cube, this.tangram];
 
         // Labels and ID's for object selection on MyInterface
-        this.objectIDs = { 'Plane': 0 , 'Pyramid': 1, 'Cone': 2};
+        this.objectIDs = { 'Plane': 0 , 'Pyramid': 1, 'Cone': 2, 'Cube': 3, 'Tangram': 4};
 
         //Other variables connected to MyInterface
         this.selectedObject = 0;
@@ -169,7 +172,7 @@ class MyScene extends CGFscene {
             this.objects[this.selectedObject].enableNormalViz();
         else
             this.objects[this.selectedObject].disableNormalViz();
-        
+            
         this.objects[this.selectedObject].display();
         this.popMatrix();
         // ---- END Primitive drawing section
