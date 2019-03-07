@@ -15,50 +15,50 @@ class MyTangram extends CGFobject {
         this.parallelogramYellow = new MyParallelogram(scene);
     }
 
-    display(scene){
+    display(){
         // ---- BEGIN Primitive drawing section
 
-        scene.pushMatrix();
-        scene.multMatrix(translation([2, 1.75, 0]));
-        scene.multMatrix(rotate_Z(45 - 17));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(translation([2, 1.75, 0]));
+        this.scene.multMatrix(rotate_Z(45 - 17));
         this.diamondGreen.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(rotate_Z(270));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(rotate_Z(270));
         this.trianglePink.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(translation([-3.83, -0.2, 0]));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(translation([-3.83, -0.2, 0]));
         this.triangleRed.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(translation([-2.5, 1.5, 0]));
-        scene.multMatrix(rotate_Z(-45));
-        scene.multMatrix(translation([-0.5, 0, 0]));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(translation([-2.5, 1.5, 0]));
+        this.scene.multMatrix(rotate_Z(-45));
+        this.scene.multMatrix(translation([-0.5, 0, 0]));
         this.trianglePurple.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(translation([2, -1, 0]));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(translation([2, -1, 0]));
         this.triangleBlue.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(translation([-1.5, 0.5, 0]));
-        scene.multMatrix(rotate_Z(135));
-        scene.multMatrix(translation([-0.13, 0, 0]));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(translation([-1.5, 0.5, 0]));
+        this.scene.multMatrix(rotate_Z(135));
+        this.scene.multMatrix(translation([-0.13, 0, 0]));
         this.triangleOrange.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
-        scene.pushMatrix();
-        scene.multMatrix(rotate_X(180));
-        scene.multMatrix(translation([2, -1, 0]));
-        scene.multMatrix(translation([Math.sqrt(2) * 0.3, Math.sqrt(2) * 0.3, 0]));
+        this.scene.pushMatrix();
+        this.scene.multMatrix(rotate_X(180));
+        this.scene.multMatrix(translation([2, -1, 0]));
+        this.scene.multMatrix(translation([Math.sqrt(2) * 0.3, Math.sqrt(2) * 0.3, 0]));
         this.parallelogramYellow.display();
-        scene.popMatrix();
+        this.scene.popMatrix();
 
     }
 }

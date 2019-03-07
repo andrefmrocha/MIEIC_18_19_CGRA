@@ -16,6 +16,10 @@ serialInclude(['../lib/CGF.js',
                 'MyTriangle.js',
                 'MyTriangleBig.js',
                 'MyTriangleSmall.js',
+                'RotateMatrix.js',
+                'ScalingMatrix.js',
+                'TranslationMatrix.js',
+                
 
 main=function()
 {
