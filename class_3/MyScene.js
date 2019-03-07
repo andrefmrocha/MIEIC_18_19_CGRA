@@ -25,6 +25,7 @@ class MyScene extends CGFscene {
         this.plane = new MyPlane(this, 5);
         this.cone = new MyCone(this, 3, 1);
         this.pyramid = new MyPyramid(this, 3, 1);
+        this.ambientLight = 0;
         
         this.objects = [this.plane, this.pyramid, this.cone];
 
@@ -41,7 +42,7 @@ class MyScene extends CGFscene {
 
     }
     initLights() {
-        this.setGlobalAmbientLight(0.3, 0.3, 0.3, 1.0);
+        this.setGlobalAmbientLight(0.3, 0.3, 0.3, this.ambientLight);
 
         this.lights[0].setPosition(2.0, 2.0, -1.0, 1.0);
         this.lights[0].setDiffuse(1.0, 1.0, 1.0, 1.0);
@@ -149,7 +150,7 @@ class MyScene extends CGFscene {
         this.loadIdentity();
         // Apply transformations corresponding to the camera position relative to the origin
         this.applyViewMatrix();
-        
+        this.setGlobalAmbientLight(this.ambientLight, this.ambientLight, this.ambientLight, 1);        
         this.lights[0].update();
         this.lights[1].update();
 
