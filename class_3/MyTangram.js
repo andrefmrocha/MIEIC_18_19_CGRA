@@ -56,7 +56,8 @@ class MyTangram extends CGFobject {
         this.scene.pushMatrix();
         this.scene.multMatrix(translation([2, 1.75, 0]));
         this.scene.multMatrix(rotate_Z(45 - 17));
-        this.green.apply();
+        //this.green.apply();
+        this.scene.customMaterial.apply();
         this.diamondGreen.display();
         this.scene.popMatrix();
 
@@ -104,7 +105,7 @@ class MyTangram extends CGFobject {
 
     }
     updateBuffers (){
-      
+
     }
 
     enableNormalViz(){
