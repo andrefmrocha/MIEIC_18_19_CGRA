@@ -33,6 +33,9 @@ class MyDiamond extends CGFobject {
 		for(var i = 0; i < 4 ; i++){
 			this.normals.push(0,0,-1);
 		}
+		var tmp = this.indices.slice(0);
+		tmp.reverse();
+		this.indices = this.indices.concat(tmp);
 
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();

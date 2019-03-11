@@ -25,6 +25,12 @@ class MyTriangle extends CGFobject{
           this.normals.push(0,0,-1);
         }
 
+
+        var tmp = this.indices.slice(0);
+        tmp.reverse();
+        this.indices = this.indices.concat(tmp);
+
+
         this.primiteType = this.scene.gl.TRIANGLES;
 
         this.initGLBuffers();
