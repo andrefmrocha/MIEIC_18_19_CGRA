@@ -4,7 +4,7 @@
  * @param scene - Reference to MyScene object
  */
 class MyDiamond extends CGFobject {
-	constructor(scene,coords) {
+	constructor(scene,coords = null) {
 		super(scene);
 		this.initBuffers();
 		if (coords != undefined)
@@ -54,5 +54,4 @@ class MyDiamond extends CGFobject {
 		this.texCoords = [...coords];
 		this.updateTexCoordsGLBuffers();
 	}
-}
 }
