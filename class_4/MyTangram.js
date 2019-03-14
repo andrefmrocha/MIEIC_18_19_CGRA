@@ -56,19 +56,17 @@ class MyTangram extends CGFobject {
         this.scene.pushMatrix();
         this.scene.multMatrix(translation([2, 1.75, 0]));
         this.scene.multMatrix(rotate_Z(45 - 17));
-        this.scene.diamondMaterial.apply();
+        this.scene.material.apply();
         this.diamondGreen.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.multMatrix(rotate_Z(270));
-        this.pink.apply();
         this.trianglePink.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.multMatrix(translation([-3.83, -0.2, 0]));
-        this.red.apply();
         this.triangleRed.display();
         this.scene.popMatrix();
 
@@ -76,13 +74,11 @@ class MyTangram extends CGFobject {
         this.scene.multMatrix(translation([-2.5, 1.5, 0]));
         this.scene.multMatrix(rotate_Z(-45));
         this.scene.multMatrix(translation([-0.5, 0, 0]));
-        this.purple.apply();
         this.trianglePurple.display();
         this.scene.popMatrix();
 
         this.scene.pushMatrix();
         this.scene.multMatrix(translation([2, -1, 0]));
-        this.blue.apply();
         this.triangleBlue.display();
         this.scene.popMatrix();
 
@@ -90,7 +86,6 @@ class MyTangram extends CGFobject {
         this.scene.multMatrix(translation([-1.5, 0.5, 0]));
         this.scene.multMatrix(rotate_Z(135));
         this.scene.multMatrix(translation([-0.13, 0, 0]));
-        this.orange.apply();
         this.triangleOrange.display();
         this.scene.popMatrix();
 
@@ -98,7 +93,6 @@ class MyTangram extends CGFobject {
         this.scene.multMatrix(rotate_X(180));
         this.scene.multMatrix(translation([2, -1, 0]));
         this.scene.multMatrix(translation([Math.sqrt(2) * 0.3, Math.sqrt(2) * 0.3, 0]));
-        this.yellow.apply();
         this.parallelogramYellow.display();
         this.scene.popMatrix();
 

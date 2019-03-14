@@ -43,12 +43,12 @@ class MyScene extends CGFscene {
         this.texture4 = new CGFtexture(this, 'images/tangram.png');
         //-------
 
-        this.diamondMaterial = new CGFappearance(this);
-        this.diamondMaterial.setAmbient(0.1, 0.1, 0.1, 1);
-        this.diamondMaterial.setDiffuse(0.9, 0.9, 0.9, 1);
-        this.diamondMaterial.setSpecular(0.1, 0.1, 0.1, 1);
-        this.diamondMaterial.setShininess(10.0);
-        this.diamondMaterial.setTexture(this.texture4);
+        this.material = new CGFappearance(this);
+        this.material.setAmbient(0.1, 0.1, 0.1, 1);
+        this.material.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.material.setSpecular(0.1, 0.1, 0.1, 1);
+        this.material.setShininess(10.0);
+        this.material.setTexture(this.texture4);
 
         //-------Objects connected to MyInterface
         this.displayAxis = true;
@@ -130,7 +130,12 @@ class MyScene extends CGFscene {
             this.quad.display();
         }
         if(this.displayTangram)
+        {
+            this.pushMatrix();
+            this.scale(0.3, 0.3, 0.3);
             this.tangram.display();
+            this.popMatrix();
+        }
 
 
         // Default texture filtering in WebCGF is LINEAR.

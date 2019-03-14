@@ -9,7 +9,7 @@ class MyParallelogram extends CGFobject{
         this.texCoords=[
           1,0,
           1,0.6666,
-          0,1
+          0,1,
           0,0.3333  
         ];
 
