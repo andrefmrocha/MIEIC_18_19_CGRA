@@ -43,6 +43,13 @@ class MyScene extends CGFscene {
         this.texture4 = new CGFtexture(this, 'images/tangram.png');
         //-------
 
+        this.diamondMaterial = new CGFappearance(this);
+        this.diamondMaterial.setAmbient(0.1, 0.1, 0.1, 1);
+        this.diamondMaterial.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.diamondMaterial.setSpecular(0.1, 0.1, 0.1, 1);
+        this.diamondMaterial.setShininess(10.0);
+        this.diamondMaterial.setTexture(this.texture4);
+
         //-------Objects connected to MyInterface
         this.displayAxis = true;
         this.scaleFactor = 5;
