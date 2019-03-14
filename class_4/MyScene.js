@@ -31,6 +31,7 @@ class MyScene extends CGFscene {
         this.quadMaterial.setDiffuse(0.9, 0.9, 0.9, 1);
         this.quadMaterial.setSpecular(0.1, 0.1, 0.1, 1);
         this.quadMaterial.setShininess(10.0);
+        this.tangram = new MyTangram(this);
         this.quadMaterial.loadTexture('images/default.png');
         this.quadMaterial.setTextureWrap('REPEAT', 'REPEAT');
         //------
@@ -55,6 +56,8 @@ class MyScene extends CGFscene {
         this.textureIds = { 'Board': 0, 'Floor': 1, 'Window': 2 };
         this.wrappingS = { 'Repeat': 0, 'Clamp to edge': 1, 'Mirrored repeat': 2 };
         this.wrappingT = { 'Repeat': 0, 'Clamp to edge': 1, 'Mirrored repeat': 2 };
+        this.displayQuad = false;
+        this.displayTangram = false;
 
       }
 
@@ -113,7 +116,14 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        this.quadMaterial.apply();
+        if(this.displayQuad)
+        {
+            this.quadMaterial.apply();
+            this.quad.display();
+        }
+        if(this.displayTangram)
+            this.tangram.display();
+            
 
         // Default texture filtering in WebCGF is LINEAR. 
         // Uncomment next line for NEAREST when magnifying, or 
@@ -121,7 +131,6 @@ class MyScene extends CGFscene {
         
         // this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MAG_FILTER, this.gl.NEAREST);
 
-        this.quad.display();
 
         // ---- END Primitive drawing section
     }
