@@ -6,6 +6,12 @@ class MyTriangleSmall extends CGFobject {
 
     initBuffers(){
 
+      this.texCoords=[
+        1,0,
+        0,0.5,
+        1,1
+      ];
+
         this.vertices = [
             -1, 0, 0,
             1, 0, 0,

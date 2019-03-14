@@ -5,6 +5,14 @@ class MyParallelogram extends CGFobject{
     }
 
     initBuffers(){
+
+        this.texCoords=[
+          1,0,
+          1,0.6666,
+          0,1
+          0,0.3333  
+        ];
+
         this.vertices = [
           0, 0, 0,
           2, 0, 0,
