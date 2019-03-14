@@ -40,12 +40,13 @@ class MyScene extends CGFscene {
         this.texture1 = new CGFtexture(this, 'images/board.jpg');
         this.texture2 = new CGFtexture(this, 'images/floor.png');
         this.texture3 = new CGFtexture(this, 'images/window.jpg');
+        this.texture4 = new CGFtexture(this, 'images/tangram.png');
         //-------
 
         //-------Objects connected to MyInterface
         this.displayAxis = true;
         this.scaleFactor = 5;
-        this.selectedTexture = -1;        
+        this.selectedTexture = -1;
         this.wrapS = 0;
         this.wrapT = 0;
 
@@ -95,7 +96,7 @@ class MyScene extends CGFscene {
     }
 
     display() {
-  
+
         // ---- BEGIN Background, camera and axis setup
         // Clear image and depth buffer everytime we update the scene
         this.gl.viewport(0, 0, this.gl.canvas.width, this.gl.canvas.height);
@@ -123,12 +124,12 @@ class MyScene extends CGFscene {
         }
         if(this.displayTangram)
             this.tangram.display();
-            
 
-        // Default texture filtering in WebCGF is LINEAR. 
-        // Uncomment next line for NEAREST when magnifying, or 
+
+        // Default texture filtering in WebCGF is LINEAR.
+        // Uncomment next line for NEAREST when magnifying, or
         // add a checkbox in the GUI to alternate in real time
-        
+
         // this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MAG_FILTER, this.gl.NEAREST);
 
 

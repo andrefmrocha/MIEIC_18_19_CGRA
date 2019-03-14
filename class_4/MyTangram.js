@@ -52,7 +52,8 @@ class MyTangram extends CGFobject {
 
     display(){
         // ---- BEGIN Primitive drawing section
-
+        //this.scene.updateAppliedTexture(this.scene.texture4);
+        this.diamondGreen.setTexture(this.scene.texture4);
         this.scene.pushMatrix();
         this.scene.multMatrix(translation([2, 1.75, 0]));
         this.scene.multMatrix(rotate_Z(45 - 17));

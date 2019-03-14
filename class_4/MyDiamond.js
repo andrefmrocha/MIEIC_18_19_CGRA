@@ -9,6 +9,14 @@ class MyDiamond extends CGFobject {
 		this.initBuffers();
 	}
 	initBuffers() {
+
+		this.texCoords = [
+			0,0,
+			0,1,
+			1,1,
+			1,0
+		];
+
 		this.vertices = [
 			-1, 0, 0,	//0
 			0, -1, 0,	//1
