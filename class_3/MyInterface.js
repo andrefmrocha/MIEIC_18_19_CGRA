@@ -62,5 +62,4 @@ class MyInterface extends CGFinterface {
     }
 
 
-
 }
