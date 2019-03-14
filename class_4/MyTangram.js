@@ -2,17 +2,17 @@ class MyTangram extends CGFobject {
     constructor(scene) {
         super(scene);
         //square
-        this.diamondGreen = new MyDiamond(scene);
+        this.diamondGreen = new MyDiamond(scene, null);
         //medium triangle
-        this.trianglePink = new MyTriangle(scene);
+        this.trianglePink = new MyTriangle(scene,[0,0.5,0,1,0.5,1]);
         //small triangle
-        this.triangleRed = new MyTriangleSmall(scene);
-        this.trianglePurple = new MyTriangleSmall(scene);
+        this.triangleRed = new MyTriangleSmall(scene,[0,0,0.25,0.25,0,0.5]);
+        this.trianglePurple = new MyTriangleSmall(scene,[0.5,0.5,0.25,0.75,0.75,0.75]);
         //big triangle
-        this.triangleBlue = new MyTriangleBig(scene);
-        this.triangleOrange = new MyTriangleBig(scene);
+        this.triangleBlue = new MyTriangleBig(scene, [0,0,1,0,0.5,0.5]);
+        this.triangleOrange = new MyTriangleBig(scene,[1,0,1,1,0.5,0.5]);
         //parallelogram
-        this.parallelogramYellow = new MyParallelogram(scene);
+        this.parallelogramYellow = new MyParallelogram(scene,[0.25,0.75,0.75,0.75,1,1,0.5,1]);
         this.green = new CGFappearance(scene);
         this.green.setAmbient(50 / 255, 205 / 255, 50 / 255, 1.0);
         this.green.setDiffuse(50 / 400, 205 / 400, 50 / 400, 1.0);
