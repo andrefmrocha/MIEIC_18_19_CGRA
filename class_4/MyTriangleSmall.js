@@ -2,6 +2,7 @@ class MyTriangleSmall extends CGFobject {
     constructor(scene,coords) {
         super(scene);
         this.initBuffers();
+        coords = coords.concat(coords);
         if (coords != undefined)
     			this.updateTexCoords(coords);
     }
@@ -24,15 +25,16 @@ class MyTriangleSmall extends CGFobject {
         ];
 
         this.indices = [
-            0, 1, 2
+            0, 1, 2,
+            3, 4, 5,
         ];
 
         this.normals = [];
         for(var i = 0; i < 3 ; i++){
-          this.normals.push(0,0,1);
+          this.normals.push(0,0,-1);
         }
         for(var i = 0; i < 3 ; i++){
-          this.normals.push(0,0,-1);
+          this.normals.push(0,0,1);
         }
 
 

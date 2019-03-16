@@ -7,6 +7,7 @@ class MyDiamond extends CGFobject {
 	constructor(scene,coords = null) {
 		super(scene);
 		this.initBuffers();
+		coords = coords.concat(coords);
 		if (coords != undefined)
       this.updateTexCoords(coords);
 	}
@@ -33,7 +34,9 @@ class MyDiamond extends CGFobject {
 		//Counter-clockwise reference of vertices
 		this.indices = [
 			0, 1, 2,
-			1, 3, 2
+			1, 3, 2,
+			4, 6, 5,
+			5, 6, 7, 
 		];
 
 		this.normals = [];
@@ -43,9 +46,6 @@ class MyDiamond extends CGFobject {
 		for(var i = 0; i < 4 ; i++){
 			this.normals.push(0,0,-1);
 		}
-		var tmp = this.indices.slice(0);
-		tmp.reverse();
-		this.indices = this.indices.concat(tmp);
 
 		this.primitiveType = this.scene.gl.TRIANGLES;
 		this.initGLBuffers();

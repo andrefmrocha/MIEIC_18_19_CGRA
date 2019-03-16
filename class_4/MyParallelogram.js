@@ -2,6 +2,7 @@ class MyParallelogram extends CGFobject{
   constructor(scene, coords) {
     super(scene);
     this.initBuffers();
+    coords = coords.concat(coords);
     if (coords != undefined)
       this.updateTexCoords(coords);
   }
@@ -33,8 +34,8 @@ class MyParallelogram extends CGFobject{
         this.indices = [
             0, 1, 3,
             1, 2, 3,
-            3, 1, 0,
-            3, 2, 1
+            4, 5, 7,
+            5, 6, 7, 
         ];
 
         this.normals = [];
@@ -45,7 +46,10 @@ class MyParallelogram extends CGFobject{
           this.normals.push(0,0,1);
         }
 
-
+        var tmp = this.indices.slice(0);
+        tmp.reverse();
+        this.indices = this.indices.concat(tmp);
+        
         this.primiteType = this.scene.gl.TRIANGLES;
 
         this.initGLBuffers();
