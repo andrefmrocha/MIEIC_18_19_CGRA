@@ -24,7 +24,7 @@ class MyTriangleBig extends CGFobject {
         ];
 
         this.indices = [
-            0, 1, 2
+            0, 1, 2,
         ];
         this.normals = [];
         for(var i = 0; i < 3 ; i++){

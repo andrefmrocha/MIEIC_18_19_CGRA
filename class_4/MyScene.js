@@ -34,6 +34,7 @@ class MyScene extends CGFscene {
         this.tangram = new MyTangram(this);
         this.quadMaterial.loadTexture('images/default.png');
         this.quadMaterial.setTextureWrap('REPEAT', 'REPEAT');
+        this.cube = new MyUnitCubeQuad(this);
         //------
 
         //------ Textures
@@ -66,7 +67,7 @@ class MyScene extends CGFscene {
         this.wrappingT = { 'Repeat': 0, 'Clamp to edge': 1, 'Mirrored repeat': 2 };
         this.displayQuad = false;
         this.displayTangram = false;
-
+        this.displayCube = true;
       }
 
     initLights() {
@@ -135,6 +136,10 @@ class MyScene extends CGFscene {
             this.scale(0.3, 0.3, 0.3);
             this.tangram.display();
             this.popMatrix();
+        }
+        if (this.displayCube)
+        {
+            this.cube.display();
         }
 
 

@@ -23,7 +23,7 @@ class MyTriangle extends CGFobject{
         ];
 
         this.indices = [
-            0, 2, 1
+            0, 2, 1,
         ];
 
         this.normals = [];
@@ -38,7 +38,6 @@ class MyTriangle extends CGFobject{
         var tmp = this.indices.slice(0);
         tmp.reverse();
         this.indices = this.indices.concat(tmp);
-
 
         this.primiteType = this.scene.gl.TRIANGLES;
 

@@ -16,6 +16,7 @@ serialInclude(['../lib/CGF.js',
                 'RotateMatrix.js',
                 'ScalingMatrix.js',
                 'TranslationMatrix.js',
+                'MyUnitCubeQuad.js',
 
 
 main=function()

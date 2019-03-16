@@ -4,7 +4,7 @@ class MyTangram extends CGFobject {
         //square
         this.diamondGreen = new MyDiamond(scene,[0.25,0.26,0.49,0.5,0.25,0.74,0.01,0.5]);
         //medium triangle
-        this.trianglePink = new MyTriangle(scene,[0,0.5,0,1,0.5,1]);
+        this.trianglePink = new MyTriangle(scene,[0,0.5,0,1,0.5,1, 0, 0.5, 0, 1, 0.5, 1]);
         //small triangle
         this.triangleRed = new MyTriangleSmall(scene,[0,0,0.25,0.25,0,0.5]);
         this.trianglePurple = new MyTriangleSmall(scene,[0.5,0.5,0.25,0.75,0.75,0.75]);
