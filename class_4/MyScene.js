@@ -42,6 +42,9 @@ class MyScene extends CGFscene {
         this.texture2 = new CGFtexture(this, 'images/floor.png');
         this.texture3 = new CGFtexture(this, 'images/window.jpg');
         this.texture4 = new CGFtexture(this, 'images/tangram.png');
+        this.textureMineSide = new CGFtexture(this, 'images/mineSide.png');
+        this.textureMineTop = new CGFtexture(this, 'images/mineTop.png');
+        this.textureMineBottom = new CGFtexture(this, 'images/mineBottom.png');
         //-------
 
         this.material = new CGFappearance(this);
@@ -50,6 +53,36 @@ class MyScene extends CGFscene {
         this.material.setSpecular(0.1, 0.1, 0.1, 1);
         this.material.setShininess(10.0);
         this.material.setTexture(this.texture4);
+
+        //-------
+
+        this.materialMineSide = new CGFappearance(this);
+        this.materialMineSide.setAmbient(0.1, 0.1, 0.1, 1);
+        this.materialMineSide.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.materialMineSide.setSpecular(0.1, 0.1, 0.1, 1);
+        this.materialMineSide.setShininess(10.0);
+        this.materialMineSide.setTexture(this.textureMineSide);
+
+        //-------
+        this.materialMineTop = new CGFappearance(this);
+        this.materialMineTop.setAmbient(0.1, 0.1, 0.1, 1);
+        this.materialMineTop.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.materialMineTop.setSpecular(0.1, 0.1, 0.1, 1);
+        this.materialMineTop.setShininess(10.0);
+        this.materialMineTop.setTexture(this.textureMineTop);
+
+        //-------
+        this.materialMineBottom = new CGFappearance(this);
+        this.materialMineBottom.setAmbient(0.1, 0.1, 0.1, 1);
+        this.materialMineBottom.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.materialMineBottom.setSpecular(0.1, 0.1, 0.1, 1);
+        this.materialMineBottom.setShininess(10.0);
+        this.materialMineBottom.setTexture(this.textureMineBottom);
+
+        //-------
+
+
+
 
         //-------Objects connected to MyInterface
         this.displayAxis = true;
