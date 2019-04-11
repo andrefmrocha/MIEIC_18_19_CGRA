@@ -84,7 +84,7 @@ class ShaderScene extends CGFscene {
 		this.testShaders[5].setUniformsValues({ uSampler2: 1 });
 		this.testShaders[6].setUniformsValues({ uSampler2: 1 });
 		this.testShaders[6].setUniformsValues({ timeFactor: 0 });
-		this.testShaders[11].setUniformsValues({waterTex: 2, waterMap: 3});
+		this.testShaders[11].setUniformsValues({ waterTex: 2, waterMap: 3 });
 
 
 		// Shaders interface variables
@@ -216,11 +216,13 @@ class ShaderScene extends CGFscene {
 		// bind additional texture to texture unit 1
 		this.texture2.bind(1);
 		this.waterText.bind(2);
+		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_S, this.gl.REPEAT);
+		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_T, this.gl.REPEAT);
 		this.waterMap.bind(3);
+		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_S, this.gl.REPEAT);
+		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_T, this.gl.REPEAT);
 
 		//Uncomment following lines in case texture must have wrapping mode 'REPEAT'
-		//this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_S, this.gl.REPEAT);
-		//this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_T, this.gl.REPEAT);
 
 		if (this.selectedObject==0) {
 			// teapot (scaled and rotated to conform to our axis)
