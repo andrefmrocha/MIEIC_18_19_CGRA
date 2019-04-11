@@ -6,10 +6,10 @@ uniform mat4 uMVMatrix;
 uniform mat4 uPMatrix;
 uniform mat4 uNMatrix;
 
-varying vec3 pos;
+varying vec4 pos;
 
 
 void main() {
 	gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
-  pos = aVertexPosition;
+  pos = gl_Position;
 }
