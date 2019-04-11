@@ -30,7 +30,7 @@ class MyScene extends CGFscene {
         this.triangle = new MyTriangle(this);
 
         this.ambientLight = 0;
-        
+
         this.objects = [this.plane, this.pyramid, this.cone, this.cube, this.tangram];
 
         // Labels and ID's for object selection on MyInterface
@@ -105,11 +105,14 @@ class MyScene extends CGFscene {
 
 
     initMaterials() {
+
+        this.gl.disable(this.gl.DEPTH_TEST);
+
         // Red Ambient (no diffuse, no specular)
         this.material1 = new CGFappearance(this);
-        this.material1.setAmbient(1, 0, 0, 1.0);
-        this.material1.setDiffuse(0, 0, 0, 1.0);
-        this.material1.setSpecular(0, 0, 0, 1.0);
+        this.material1.setAmbient(1, 0, 0, .10);
+        this.material1.setDiffuse(0, 0, 0, .10);
+        this.material1.setSpecular(0, 0, 0, .10);
         this.material1.setShininess(10.0);
 
         // Red Diffuse (no ambient, no specular)
@@ -161,7 +164,7 @@ class MyScene extends CGFscene {
         this.loadIdentity();
         // Apply transformations corresponding to the camera position relative to the origin
         this.applyViewMatrix();
-        this.setGlobalAmbientLight(this.ambientLight, this.ambientLight, this.ambientLight, 1);        
+        this.setGlobalAmbientLight(this.ambientLight, this.ambientLight, this.ambientLight, 1);
         this.lights[0].update();
         this.lights[1].update();
 
@@ -175,7 +178,7 @@ class MyScene extends CGFscene {
 
         this.pushMatrix();
         this.scale(this.scaleFactor,this.scaleFactor,this.scaleFactor);
-        
+
         if (this.displayNormals)
             this.objects[this.selectedObject].enableNormalViz();
         else
