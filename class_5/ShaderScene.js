@@ -184,6 +184,8 @@ class ShaderScene extends CGFscene {
 		// only shader 6 is using time factor
 		if (this.selectedExampleShader == 6 || this.selectedExampleShader == 11)
 			this.testShaders[6].setUniformsValues({ timeFactor: t / 100 % 1000 });
+		if(this.selectedExampleShader == 11)
+			this.testShaders[11].setUniformsValues({timeFactor: t/100 %1000});
 	}
 
 	// main display function
@@ -215,7 +217,7 @@ class ShaderScene extends CGFscene {
 
 		// bind additional texture to texture unit 1
 		this.texture2.bind(1);
-		
+
 		this.waterText.bind(2);
 		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_S, this.gl.REPEAT);
 		this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_WRAP_T, this.gl.REPEAT);
