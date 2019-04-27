@@ -182,8 +182,11 @@ class ShaderScene extends CGFscene {
 	// called periodically (as per setUpdatePeriod() in init())
 	update(t) {
 		// only shader 6 is using time factor
-		if (this.selectedExampleShader == 6 || this.selectedExampleShader == 11)
+		if (this.selectedExampleShader == 6)
 			this.testShaders[6].setUniformsValues({ timeFactor: t / 100 % 1000 });
+		if(this.selectedExampleShader == 11)
+			this.testShaders[11].setUniformsValues({ timeFactor: t / 100 % 1000 });
+
 	}
 
 	// main display function
