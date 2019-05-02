@@ -19,18 +19,29 @@ class MyParallelogram extends CGFobject{
             3, 2, 1
         ];
 
-        this.texCoords = [
-          0,0,
-          0,1,
-          1,1,
-          1,0
+        this.normals = [
+          0,0,-1,
+          0,0,-1,
+          0,0,-1,
+          0,0,-1,
+          0,0,1,
+          0,0,1,
+          0,0,1,
+          0,0,1,
         ];
-        
+
         let tmp = this.indices.slice(0);
         tmp.reverse();
         this.indices = this.indices.concat(tmp);
 
 
+        this.texCoords = [
+            0,0,
+            0,1,
+            1,1,
+            1,0,
+        ];
+        
         this.primiteType = this.scene.gl.TRIANGLES;
 
         this.initGLBuffers();
