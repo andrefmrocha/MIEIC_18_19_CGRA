@@ -9,6 +9,10 @@ serialInclude([
   "MyInterface.js",
   "MyLSystem.js",
   "MyLSPlant.js",
+  'MyBranch.js' ,
+  'MyLeaf.js',
+  'MyParallelogram.js',
+  "MyCylinder.js",
 
   (main = function() {
     var app = new CGFapplication(document.body);

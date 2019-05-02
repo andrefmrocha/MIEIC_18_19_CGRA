@@ -27,10 +27,34 @@ class MyScene extends CGFscene {
         this.angle = 30.0;
         this.iterations = 4;
         this.scaleFactor = 0.5
-        this.lSystem = new MyLSystem(this);
+        this.plant = new MyLSPlant(this);
+
+        this.materialLeaf = new CGFappearance(this);
+        this.materialLeaf.setAmbient(
+            0.1,
+            0.1,
+            0.1,
+            1
+        );
+        this.materialLeaf.setDiffuse(
+            0.9,
+            0.9,
+            0.9,
+            1
+        );
+        this.materialLeaf.setSpecular(
+            0.1,
+            0.1,
+            0.1,
+            1
+        );
+        this.materialLeaf.setShininess(10.0);
+        this.materialLeaf.loadTexture(
+            "images/treetop.jpg"
+        );
 
         this.doGenerate = function () {
-            this.lSystem.generate(
+            this.plant.generate(
                 this.axiom,
                 {
                     "F": [ this.ruleF ],
@@ -47,7 +71,7 @@ class MyScene extends CGFscene {
 
         //Initialize scene objects
         this.axis = new CGFaxis(this);
-        
+
     }
 
     initLights() {
@@ -83,7 +107,7 @@ class MyScene extends CGFscene {
 
         // ---- BEGIN Primitive drawing section
 
-        this.lSystem.display();
+        this.plant.display();
 
         // ---- END Primitive drawing section
     }
