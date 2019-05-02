@@ -4,6 +4,7 @@ class MyBranch extends CGFobject{
     this.branch = new MyCylinder(scene,3,0.5,1);
   }
   display(){
+    this.scene.materialWood.apply();
     this.branch.display();
   }
 }

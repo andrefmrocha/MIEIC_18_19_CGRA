@@ -48,6 +48,14 @@ class MyScene extends CGFscene {
         //Initialize scene objects
         this.axis = new CGFaxis(this);
 
+
+        this.materialWood = new CGFappearance(this);
+        this.materialWood.setAmbient(0.1, 0.1, 0.1, 1);
+        this.materialWood.setDiffuse(0.9, 0.9, 0.9, 1);
+        this.materialWood.setSpecular(0.1, 0.1, 0.1, 1);
+        this.materialWood.setShininess(10.0);
+        this.materialWood.loadTexture('images/wood.jpg');
+
     }
 
     initLights() {
