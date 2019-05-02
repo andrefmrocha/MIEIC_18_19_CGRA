@@ -29,6 +29,12 @@ class MyScene extends CGFscene {
         this.scaleFactor = 0.5
         this.plant = new MyLSPlant(this);
 
+        this.rulesX = [];
+        this.rulesX.push("F[-X][X]F[-X]+X");
+        this.rulesX.push("F[-X][x]+X");
+        this.rulesX.push("F[+X]-X");
+
+
         this.materialLeaf = new CGFappearance(this);
         this.materialLeaf.setAmbient(
             0.1,
@@ -58,7 +64,7 @@ class MyScene extends CGFscene {
                 this.axiom,
                 {
                     "F": [ this.ruleF ],
-                    "X": [ this.ruleX ]
+                    "X":  this.rulesX
                 },
                 this.angle,
                 this.iterations,
