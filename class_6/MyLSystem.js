@@ -24,7 +24,7 @@ class MyLSystem extends CGFobject {
     }
 
 
-    // gera o sistema L com os par�metros atuais da cena
+    // gera o sistema L com os par�metros atuais da cena
     generate(_axiom, _productions, _angle, _iterations, _scale){
         // copia o axioma da cena para iniciar a sequência de desenvolvimento
         this.axiom = _axiom;
@@ -45,7 +45,7 @@ class MyLSystem extends CGFobject {
         this.iterate()
      }
 
-  
+
     // desenvolve o axioma ao longo de uma sequência de desenvolvimento com um determinado número de iterações
     iterate(){
         var i, j;
@@ -55,16 +55,21 @@ class MyLSystem extends CGFobject {
             // substitui cada um dos caracteres da cadeia de caracteres de acordo com as produções
             for (j=0; j<this.axiom.length; ++j){
                 var axiomProductions=this.productions[this.axiom[j]];
+
+								console.log(axiomProductions);
                 // aplicar producoes
                 if (axiomProductions === undefined){
                     // caso nao se aplique nenhuma producao deixa estar o caracter original
+										console.log("C");
                     newString += this.axiom[j];
                 }else if (axiomProductions.length == 1) {
                     // caso apenas exista uma producao, aplica-a
+										console.log("V");
                     newString += axiomProductions[0];
                 } else {
                     // sistema estocastico - varias producoes sao aplicaveis - seleciona aleatoriamente
-                    newString += axiomProductions[Math.floor(Math.random() * axiomProductions.length)];                    
+										console.log("A");
+                    newString += axiomProductions[Math.floor(Math.random() * axiomProductions.length)];
                 }
             }
 
