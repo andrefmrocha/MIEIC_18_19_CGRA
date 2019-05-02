@@ -37,9 +37,9 @@ class MyScene extends CGFscene {
 
         this.materialLeaf = new CGFappearance(this);
         this.materialLeaf.setAmbient(
-            0.1,
-            0.1,
-            0.1,
+            0.9,
+            0.9,
+            0.9,
             1
         );
         this.materialLeaf.setDiffuse(
@@ -49,9 +49,9 @@ class MyScene extends CGFscene {
             1
         );
         this.materialLeaf.setSpecular(
-            0.1,
-            0.1,
-            0.1,
+            0.9,
+            0.9,
+            0.9,
             1
         );
         this.materialLeaf.setShininess(10.0);

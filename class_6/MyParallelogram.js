@@ -10,6 +10,10 @@ class MyParallelogram extends CGFobject{
             2, 0, 0,
             3, 1, 0,
             1, 1, 0,
+            0, 0, 0,
+            2, 0, 0,
+            3, 1, 0,
+            1, 1, 0,
         ];
 
         this.indices = [
@@ -17,17 +21,13 @@ class MyParallelogram extends CGFobject{
             1, 2, 3,
             3, 1, 0,
             3, 2, 1,
+            4, 5, 7,
+            5, 6, 7,
+            7, 5, 4, 
+            7, 6, 5,
         ];
 
         this.normals = [
-            0,0,1,
-            0,0,1,
-            0,0,1,
-            0,0,1,
-            0,0,-1,
-            0,0,-1,
-            0,0,-1,
-            0,0,-1,
             0,0,-1,
             0,0,-1,
             0,0,-1,
@@ -38,12 +38,11 @@ class MyParallelogram extends CGFobject{
             0,0,1,
         ];
 
-        let tmp = this.indices.slice(0);
-        tmp.reverse();
-        this.indices = this.indices.concat(tmp);
-
-
         this.texCoords = [
+            0,1,
+            1,1,
+            1,0,
+            0,0,
             0,0,
             0,1,
             1,1,
