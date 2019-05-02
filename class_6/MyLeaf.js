@@ -6,7 +6,8 @@ class MyLeaf extends CGFobject{
   display(){
     this.scene.pushMatrix();
     this.scene.scale(1,1,1);
-    this.branch.display();
+    this.scene.materialLeaf.apply();
+    this.leaf.display();
     this.scene.popMatrix()
   }
 }
